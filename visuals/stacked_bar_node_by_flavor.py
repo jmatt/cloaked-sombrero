@@ -1,5 +1,6 @@
 from collections import OrderedDict
 from itertools import chain, repeat
+import os
 
 import numpy as np
 
@@ -73,5 +74,7 @@ def build_visual(data):
         btm = [f + b for f, b in zip(btm, v)]
     plt.legend(color_labels, flavors.keys())
 
-build_visual(get_data())
-plt.show()
+
+if __name__ == "__main__":
+    build_visual(get_data())
+    plt.show()
